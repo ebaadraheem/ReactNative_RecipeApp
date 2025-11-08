@@ -26,7 +26,10 @@ app.use("/Recipe", Recipe);
 app.use("/Favourites", Favourites);
 
 app.use("/Category", Category);
+app.get("/", (req, res) => {
+  res.send("Recipe App server is running....");
+});
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Server running on http://0.0.0.0:${port}`);
 });

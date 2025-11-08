@@ -4,6 +4,7 @@ import { Add,Remove,All } from "../Functions/Category/Functions.js";
 const router = express.Router();
 
 router.get("/All", async (req, res) => {
+  console.log("Received request for all categories");
   const categories = await All();
 
   if (categories.success) {
