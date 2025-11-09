@@ -21,7 +21,3 @@ FIREBASE_API_KEY: Your Firebase API key for authenticating with Firebase service
 To start the development server and run the application on your device or emulator: bash Copy code npm start # or yarn start This will open the Expo Developer Tools in your browser.
 Follow the instructions to open the app on an Android/iOS device or emulator.
 Note: Its backend server repository is named as RecipeApp_Backend in the repository section.
-
-
-
-Important: Need to create a eas.json file for development as well as for production (Because .env is not used)

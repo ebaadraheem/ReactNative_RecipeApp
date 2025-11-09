@@ -7,5 +7,4 @@ build
 .env.local
 .env.*.local
 .expo-shared
-eas.json
 .vscode

@@ -58,7 +58,7 @@
       "eas": {
         "projectId": "b9eb7c9c-703c-47af-ab47-b34b0e7f43b4"
       },
-      "SERVER_URL": "https://recipeapp-server-cshybwcke5gzf3eu.canadacentral-01.azurewebsites.net" 
+      "SERVER_URL": "https://localhost:7071"
     }
   }
 }

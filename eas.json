@@ -8,13 +8,13 @@
       "developmentClient": true,
       "distribution": "internal",
       "env": {
-        "SERVER_URL": "https://recipeapp-server-cshybwcke5gzf3eu.canadacentral-01.azurewebsites.net"
+        "SERVER_URL": "https://localhost:7071"
       }
     },
     "preview": {
       "distribution": "internal",
       "env": {
-        "SERVER_URL": "https://recipeapp-server-cshybwcke5gzf3eu.canadacentral-01.azurewebsites.net"
+        "SERVER_URL": "https://localhost:7071"
       }
     },
     "production": {
