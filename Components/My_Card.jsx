@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import { React, useState } from "react";
 import AntDesign from "@expo/vector-icons/AntDesign";
+import { SERVER_URL } from "../Store/config";
 import {
   useUserRecipesStore,
   useUserInfoStore,
@@ -23,7 +24,7 @@ const My_Card = ({ item }) => {
 
   const Remove_Recipe = async (item) => {
     try {
-      const response = await fetch(`${process.env.SERVER_URL}/Recipe/Delete`, {
+      const response = await fetch(`${SERVER_URL}/Recipe/Delete`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

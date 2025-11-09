@@ -1,6 +1,5 @@
 import {
   Image,
-  SafeAreaView,
   Text,
   View,
   TouchableOpacity,
@@ -11,7 +10,6 @@ const Entrance = ({ navigation }) => {
   const { IsUser } = useUserInfoStore();
 
   return (
-    <SafeAreaView>
       <View className=" bg-[#3DA0A7] h-full ">
         <View className="  h-[60%] justify-center items-center  ">
           <View className="  w-[90%] justify-end h-[90%] ">
@@ -62,7 +60,6 @@ const Entrance = ({ navigation }) => {
           )}
         </View>
       </View>
-    </SafeAreaView>
   );
 };
 

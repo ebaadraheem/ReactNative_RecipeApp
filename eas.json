@@ -6,13 +6,22 @@
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "env": {
+        "SERVER_URL": "https://recipeapp-server-cshybwcke5gzf3eu.canadacentral-01.azurewebsites.net"
+      }
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "env": {
+        "SERVER_URL": "https://recipeapp-server-cshybwcke5gzf3eu.canadacentral-01.azurewebsites.net"
+      }
     },
     "production": {
-      "autoIncrement": true
+      "autoIncrement": true,
+      "env": {
+        "SERVER_URL": "@SERVER_URL"
+      }
     }
   },
   "submit": {

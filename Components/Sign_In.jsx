@@ -1,7 +1,6 @@
 import {
   Image,
   KeyboardAvoidingView,
-  SafeAreaView,
   Text,
   TextInput,
   View,
@@ -10,6 +9,7 @@ import {
   Alert,
   ScrollView,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { Dimensions } from "react-native";
 import { React, useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";

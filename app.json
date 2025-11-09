@@ -2,7 +2,7 @@
   "expo": {
     "name": "RecipeApp",
     "slug": "recipeapp",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -23,12 +23,13 @@
         {
           "photosPermission": "The app accesses your photos to let you share them with your friends."
         }
-      ]
+      ],
+      "expo-font"
     ],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.example.recipeapp",
-      "buildNumber": "1.0.0",
+      "buildNumber": "2",
       "infoPlist": {
         "NSCameraUsageDescription": "This app requires access to your camera to take photos.",
         "NSPhotoLibraryUsageDescription": "This app requires access to your photo library to select and upload images.",
@@ -36,6 +37,7 @@
       }
     },
     "android": {
+      "versionCode": 2,
       "package": "com.example.recipeapp",
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
@@ -55,7 +57,8 @@
     "extra": {
       "eas": {
         "projectId": "b9eb7c9c-703c-47af-ab47-b34b0e7f43b4"
-      }
+      },
+      "SERVER_URL": "https://recipeapp-server-cshybwcke5gzf3eu.canadacentral-01.azurewebsites.net" 
     }
   }
 }

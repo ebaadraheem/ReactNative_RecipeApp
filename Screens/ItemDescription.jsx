@@ -2,10 +2,10 @@ import {
   Text,
   View,
   Image,
-  SafeAreaView,
   ScrollView,
   Pressable,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import React, { useState, useEffect, useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { MaterialIcons } from "@expo/vector-icons";

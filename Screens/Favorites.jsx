@@ -1,10 +1,10 @@
 import {
   Text,
-  SafeAreaView,
   FlatList,
   RefreshControl,
   ScrollView,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { React, useEffect, useState } from "react";
 import Card from "../Components/Card";
 import { useFavoriteStore, useUserInfoStore } from "../Store/Store";

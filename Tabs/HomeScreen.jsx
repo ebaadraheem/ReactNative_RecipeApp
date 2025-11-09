@@ -22,7 +22,7 @@ const HomeScreen = () => {
           fontSize: 22,
         },
       }}
-      initialRouteName="Home"
+      initialRouteName="CategoryScreen"
     >
       <Stack.Screen
         name="CategoryScreen"

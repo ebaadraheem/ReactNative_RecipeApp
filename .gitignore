@@ -1,0 +1,11 @@
+.expo/
+node_modules
+*.log
+dist
+build
+.env
+.env.local
+.env.*.local
+.expo-shared
+eas.json
+.vscode

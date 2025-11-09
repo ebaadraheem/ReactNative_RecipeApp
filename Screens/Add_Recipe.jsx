@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { SERVER_URL } from "../Store/config";
 import {
-  SafeAreaView,
   Text,
   TextInput,
   TouchableOpacity,
@@ -83,7 +84,7 @@ const Add_Recipe = () => {
 
     try {
       const response = await fetch(
-        `${process.env.SERVER_URL}/Recipe/UploadImage`,
+        `${SERVER_URL}/Recipe/UploadImage`,
         {
           method: "POST",
           body: formData,
@@ -168,7 +169,7 @@ const Add_Recipe = () => {
         image_url: imageUploadResult.data, // Assuming Upload_Image returns the image URL
       };
 
-      const response = await fetch(`${process.env.SERVER_URL}/Recipe/Add`, {
+      const response = await fetch(`${SERVER_URL}/Recipe/Add`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -253,9 +254,9 @@ const Add_Recipe = () => {
                       AddIngredients(trimmedIngredient);
                     }
                   }}
-                  className="bg-[#3DA0A7]  rounded-md p-2"
+                  className="bg-[#3DA0A7]  rounded-md px-2.5 py-2"
                 >
-                  <Text className=" text-center text-white">Add</Text>
+                  <Text className=" text-center text-lg text-white">Add</Text>
                 </TouchableOpacity>
               </View>
               <View className="flex-row items-center flex-wrap">
@@ -317,7 +318,7 @@ const Add_Recipe = () => {
               </View>
             </View>
 
-            <View className="space-y-2">
+            <View className="space-y-2 mb-4">
               <Text className="text-[#042628] text-lg">Category</Text>
               <View className="bg-[#3DA0A7] w-40 rounded-md ">
                 <Picker

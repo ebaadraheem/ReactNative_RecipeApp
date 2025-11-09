@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import {
-  SafeAreaView,
   Text,
   View,
   TextInput,
@@ -11,6 +10,8 @@ import {
   Alert,
   Modal,
 } from "react-native";
+import { SERVER_URL } from "../Store/config";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { v4 as uuidv4 } from "uuid";
 import { useCategoryStore } from "../Store/Store";
 import * as ImagePicker from "expo-image-picker";
@@ -67,7 +68,7 @@ const Admin_Category = () => {
 
     try {
       const response = await fetch(
-        `${process.env.SERVER_URL}/Recipe/UploadImage`,
+        `${SERVER_URL}/Recipe/UploadImage`,
         {
           method: "POST",
           body: formData,
@@ -98,7 +99,7 @@ const Admin_Category = () => {
   };
 
   const Add_Category = async (category) => {
-    const response = await fetch(process.env.SERVER_URL + "/Category/Add", {
+    const response = await fetch(SERVER_URL + "/Category/Add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -115,7 +116,7 @@ const Admin_Category = () => {
   };
 
   const Remove_Category = async (item) => {
-    const response = await fetch(process.env.SERVER_URL + "/Category/Remove", {
+    const response = await fetch(SERVER_URL + "/Category/Remove", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

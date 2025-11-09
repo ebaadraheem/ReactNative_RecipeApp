@@ -1,10 +1,9 @@
-import { Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import React from "react";
 import {
   DrawerContentScrollView,
   DrawerItemList,
 } from "@react-navigation/drawer";
-import { TouchableOpacity } from "react-native-gesture-handler";
 import { signOut } from "firebase/auth";
 import { auth } from "../Firebase/Firebase";
 import {
@@ -22,7 +21,7 @@ const CustomDrawerContent = (props) => {
     <DrawerContentScrollView {...props}>
       {User ? (
         <View style={{ marginTop: 5, paddingHorizontal: 15, paddingTop: 10 }}>
-          <Text className="text-white font-bold text-[16px]">
+          <Text className="text-white font-bold text-[16px] ">
             {User && User.email}
           </Text>
         </View>
@@ -37,7 +36,7 @@ const CustomDrawerContent = (props) => {
 
       {IsUser ? (
         <View style={{ marginTop: 2, padding: 15 }}>
-          <TouchableOpacity
+          <Pressable
             style={{
               backgroundColor: "#3DA0A7",
               padding: 10,
@@ -63,11 +62,11 @@ const CustomDrawerContent = (props) => {
             <Text style={{ color: "white", textAlign: "center" }}>
               Logn Out
             </Text>
-          </TouchableOpacity>
+          </Pressable>
         </View>
       ) : (
         <View style={{ marginTop: 2, padding: 15 }}>
-          <TouchableOpacity
+          <Pressable
             style={{
               backgroundColor: "#3DA0A7",
               padding: 10,
@@ -78,7 +77,7 @@ const CustomDrawerContent = (props) => {
             }}
           >
             <Text style={{ color: "white", textAlign: "center" }}>Logn In</Text>
-          </TouchableOpacity>
+          </Pressable>
         </View>
       )}
     </DrawerContentScrollView>

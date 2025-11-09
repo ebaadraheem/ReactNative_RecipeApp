@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { SERVER_URL } from "./config";
 // Category Store
 const useCategoryStore = create((set) => ({
   CategoryData: [],
@@ -15,7 +16,8 @@ const useCategoryStore = create((set) => ({
 
   Get_Categories: async () => {
     try {
-      const response = await fetch(process.env.SERVER_URL + "/Category/All");
+      const response = await fetch(SERVER_URL + "/Category/All");
+      
       const data = await response.json();
 
       if (data.status === 200) {
@@ -24,7 +26,8 @@ const useCategoryStore = create((set) => ({
         console.log("Failed to fetch categories");
       }
     } catch (error) {
-      console.log("An error occurred while fetching categories");
+      console.log("An error occurred while fetching categories", error);
+      console.log("Server URL:", SERVER_URL);
     }
   },
 }));
@@ -45,7 +48,7 @@ const useRecipes = create((set, get) => ({
   },
   Get_Recipes: async () => {
     try {
-      const response = await fetch(`${process.env.SERVER_URL}/Recipe/All`);
+      const response = await fetch(`${SERVER_URL}/Recipe/All`);
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -84,7 +87,7 @@ const useFavoriteStore = create((set) => ({
     })),
   Get_Fav_Data: async (user_id) => {
     try {
-      const res = await fetch(`${process.env.SERVER_URL}/Favourites/All`, {
+      const res = await fetch(`${SERVER_URL}/Favourites/All`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -108,7 +111,7 @@ const useFavoriteStore = create((set) => ({
   // Add a favorite recipe
   Add_Fav_Function: async (userId, recipeId) => {
     try {
-      const response = await fetch(`${process.env.SERVER_URL}/Favourites/Add`, {
+      const response = await fetch(`${SERVER_URL}/Favourites/Add`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -124,7 +127,7 @@ const useFavoriteStore = create((set) => ({
   Remove_Fav_Function: async (userId, recipeId) => {
     try {
       const response = await fetch(
-        `${process.env.SERVER_URL}/Favourites/Remove`,
+        `${SERVER_URL}/Favourites/Remove`,
         {
           method: "POST",
           headers: {
@@ -206,7 +209,7 @@ const useUserRecipesStore = create((set) => ({
   FetchUserRecipes: async (UserId) => {
     try {
       const response = await fetch(
-        `${process.env.SERVER_URL}/Recipe/User_Recipes`,
+        `${SERVER_URL}/Recipe/User_Recipes`,
         {
           method: "POST",
           headers: {

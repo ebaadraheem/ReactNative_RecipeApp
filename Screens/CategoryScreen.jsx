@@ -1,13 +1,13 @@
 import {
   FlatList,
-  SafeAreaView,
   Text,
   TouchableOpacity,
   View,
   RefreshControl,
   Image,
+  ActivityIndicator
 } from "react-native";
-
+import { SafeAreaView } from "react-native-safe-area-context";
 import { React, useEffect, useState, useCallback } from "react";
 import { ScrollView } from "react-native";
 
@@ -94,7 +94,7 @@ const CategoryScreen = ({ navigation }) => {
           alignItems: "center",
         }}
       >
-        <Text className="text-xl">No items found</Text>
+        <ActivityIndicator size="large" color="#3DA0A7" />
       </ScrollView>
     ) : (
       <View className="mt-10 mb-5 justify-center items-center">

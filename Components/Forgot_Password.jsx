@@ -1,6 +1,5 @@
-import { ScrollView, Text, TextInput, View,Alert } from "react-native";
+import { ScrollView, Text, TextInput, View,Alert, TouchableOpacity } from "react-native";
 import {React,useState} from "react";
-import { TouchableOpacity } from "react-native-gesture-handler";
 import { auth } from "../Firebase/Firebase";
 import { sendPasswordResetEmail } from "firebase/auth";
 const Forgot_Password = () => {

@@ -4,8 +4,8 @@ import {
   RefreshControl,
   ScrollView,
   Text,
-  SafeAreaView,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useState, useEffect, useCallback } from "react";
 import Card from "../Components/Card";
 import { useRecipes, useSwitchStore } from "../Store/Store";

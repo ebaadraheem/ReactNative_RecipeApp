@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import {
-  SafeAreaView,
   FlatList,
   ScrollView,
   RefreshControl,
   Text,
 } from "react-native";
 import { useUserInfoStore, useUserRecipesStore } from "../Store/Store";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 import My_Card from "./My_Card";
 const My_Recipes = () => {
