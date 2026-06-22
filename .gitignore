@@ -1,0 +1,9 @@
+.env
+.env.local
+.env.*.local
+.expo-shared
+node_modules    
+*.log
+dist
+build
+.expo/
